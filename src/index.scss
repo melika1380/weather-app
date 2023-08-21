@@ -2,10 +2,14 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family: sans-serif;
 }
 html{
     background: #3ea2ef;
-    color: rgb(232, 232, 232);
+    color: rgb(255, 255, 255);
+    background-image: url("./background/peakpx\ \(3\).jpg");
+    background-repeat:no-repeat;
+    background-size:100%;
 }
 body{
     background: #9dc9ea3a;

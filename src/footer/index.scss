@@ -4,17 +4,34 @@
 }
 .maxList{
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     :first-child{
         font-weight: bold;
+    }
+    :last-child{
+       font-weight:lighter;
+       font-size: 0.9rem;
+       margin-top: 0.3rem;
     }
 }
 .minList{
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     :first-child{
         font-weight: bold;
     }
+    :last-child{
+        font-weight:lighter;
+        font-size: 0.9rem;
+        margin-top: 0.3rem;
+     }
 }
 .vertical-line {
-    border-left: 1px solid rgb(230, 230, 230); /* رنگ و ضخامت خط عمودی را می‌توانید تغییر دهید */
-    height: 50px; /* ارتفاع خط عمودی را تغییر دهید */
-    margin: 0 auto; /* تنظیم مرکز چین */}
+    border-left: 1px solid rgba(230, 230, 230, 0.317); 
+    height: 50px; 
+    margin: 0 auto; 
+}
