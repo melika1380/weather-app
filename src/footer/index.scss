@@ -1,0 +1,20 @@
+.footer{
+    display: flex;
+    align-items: center;
+}
+.maxList{
+    padding: 1rem;
+    :first-child{
+        font-weight: bold;
+    }
+}
+.minList{
+    padding: 1rem;
+    :first-child{
+        font-weight: bold;
+    }
+}
+.vertical-line {
+    border-left: 1px solid rgb(230, 230, 230); /* رنگ و ضخامت خط عمودی را می‌توانید تغییر دهید */
+    height: 50px; /* ارتفاع خط عمودی را تغییر دهید */
+    margin: 0 auto; /* تنظیم مرکز چین */}

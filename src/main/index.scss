@@ -1,0 +1,26 @@
+main{
+}
+.information{
+  text-align: center;
+  list-style: none;
+  .temperature{
+    font-size: 4rem;
+    font-weight:bold;
+    .deg{
+        margin-left: 1rem;
+    }
+  }
+  .city{
+    margin: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .icon{
+    margin-top: 1rem;
+    background-image: url('../icon/cloudy-cloud-svgrepo-com.svg');
+  }
+  .bold{
+    font-size: 0.8rem;
+    margin: 0.5rem;
+  }
+}
