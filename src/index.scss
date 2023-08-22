@@ -10,6 +10,7 @@ html{
     background-image: url("./background/peakpx\ \(3\).jpg");
     background-repeat:no-repeat;
     background-size:100%;
+    background-position:top;
 }
 body{
     background: #9dc9ea3a;
@@ -23,3 +24,26 @@ body{
     flex-direction: column;
     box-shadow:2px 2px 20px 2px rgba(0, 0, 0, 0.007);
 }
+@media (min-width: 1000px) {
+    body{
+        margin: 0;
+    }
+    html{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+  }
+  @media screen and (max-width: 1000px) and (min-width: 666px) {
+    body{
+        margin: 0;
+    }
+    html{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+  }
+  
