@@ -3,9 +3,10 @@ import "./index.scss";
 import { checkWeather } from "./searchAPI";
 
 function loaderPage() {
-  const searchBox = document.querySelector(".header input");
-  const searchBtn = document.querySelector(".header button");
 
+  const searchBox = document.querySelector(".input");
+  const searchBtn = document.querySelector(".header button");
+  
   searchBtn.addEventListener("click", () => {
     const originalColor = window.getComputedStyle(searchBtn).backgroundColor;
     searchBtn.style.backgroundColor = "rgba(255, 255, 255, 0.596)";
@@ -16,12 +17,16 @@ function loaderPage() {
     }, 200);
     checkWeather(searchBox.value);
   });
+
   const keyUp = (event) => {
     if (event.key === "Enter") {
       searchBtn.click();
     }
   };
+
   searchBox.addEventListener("keyup", keyUp);
+
+ 
 }
 
 window.addEventListener("load", loaderPage);
