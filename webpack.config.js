@@ -1,3 +1,4 @@
+// webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -14,6 +15,10 @@ module.exports = {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.png$/,
+        type: "asset", 
+      },
     ],
   },
   plugins: [
@@ -22,7 +27,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: "[name].bundle.js",       //همه فایل ها میشوند یک فایل جاوا اسکریپت
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "public"),
     clean: true,
   },
