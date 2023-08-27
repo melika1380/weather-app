@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         test: /\.png$/,
-        type: "asset", 
+        type: "asset/resource", 
       },
     ],
   },
