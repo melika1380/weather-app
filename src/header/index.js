@@ -1,6 +1,8 @@
 import html from "./index.html";
 import "./index.scss";
 import { checkWeather } from "./searchAPI";
+import cloudy from "../icon/few-clouds.png";
+
 function loaderPage() {
   const searchBox = document.querySelector(".input");
   const searchBtn = document.querySelector(".header button");
@@ -12,10 +14,12 @@ function loaderPage() {
     <li class="mainWeather bold">CLOUDS</li>
     <li class="description bold">FEW CLOUDS</li>
   </ul>
-  <div class="icon"><img  class="icon-weather" src="../icon/cloudy.png"></div>
+  <div class="icon"><img  class="icon-weather"></div>
   <div class="temperature">45°</div>
     `;
   information.innerHTML = defultCity;
+  const weatherIcon = document.querySelector(".icon-weather");
+  weatherIcon.src = cloudy;
 
   const footer = document.querySelector(".footer");
   const footerDefult = `
@@ -29,7 +33,7 @@ function loaderPage() {
   <li class="maxTemp">19.95°</li>
  </ul>`;
   footer.innerHTML = footerDefult;
-  
+
   searchBtn.addEventListener("click", () => {
     checkWeather(searchBox.value);
     searchBox.value = "";
