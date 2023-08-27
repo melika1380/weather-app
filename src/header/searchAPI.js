@@ -10,9 +10,9 @@ const apiUrl =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 export async function checkWeather(city) {
-  const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-  var data = await response.json();
   try {
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+    var data = await response.json();
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temperature").innerHTML = data.main.temp + "°";
     document.querySelector(".maxTemp").innerHTML = data.main.temp_max + "°";
@@ -29,31 +29,39 @@ export async function checkWeather(city) {
 
   function result() {
     const weatherIcon = document.querySelector(".icon-weather");
-    if (data.weather[0].description == "Clear") {
-      weatherIcon.src = clear;
-    } else if (data.weather[0].main == "Clouds") {
-      weatherIcon.src = cloudy;
-    } else if (data.weather[0].main == "Drizzle") {
-      weatherIcon.src = rainy;
-    } else if (
-      data.weather[0].main == "Mist" ||
-      data.weather[0].main == "Smoke" ||
-      data.weather[0].main == "Haze" ||
-      data.weather[0].main == "Dust" ||
-      data.weather[0].main == "Fog" ||
-      data.weather[0].main == "Sand" ||
-      data.weather[0].main == "Dust" ||
-      data.weather[0].main == "Ash" ||
-      data.weather[0].main == "Squall" ||
-      data.weather[0].main == "Tornado"
-    ) {
-      weatherIcon.src = windy;
-    } else if (data.weather[0].main == "Snow") {
-      weatherIcon.src = snow;
-    } else if (data.weather[0].main == "Thunderstorm") {
-      weatherIcon.src = thunderstorm;
-    } else if (data.weather[0].main == "Rain") {
-      weatherIcon.src = rainy;
+    switch (data.weather[0].main) {
+      case "Clear":
+        weatherIcon.src = clear;
+        break;
+      case "Clouds":
+        weatherIcon.src = cloudy;
+        break;
+      case "Drizzle":
+        weatherIcon.src = rainy;
+        break;
+      case "Mist":
+      case "Smoke":
+      case "Haze":
+      case "Dust":
+      case "Fog":
+      case "Sand":
+      case "Ash":
+      case "Squall":
+      case "Tornado":
+        weatherIcon.src = windy;
+        break;
+      case "Snow":
+        weatherIcon.src = snow;
+        break;
+      case "Thunderstorm":
+        weatherIcon.src = thunderstorm;
+        break;
+      case "Rain":
+        weatherIcon.src = rainy;
+        break;
+      default:
+        weatherIcon.src=cloudy;
+        break;
     }
   }
 }
