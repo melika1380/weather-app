@@ -1,6 +1,5 @@
 .header{
     display: flex;
-    //align-items: flex-end;
     color:rgb(255, 255, 255);
 }
 input{
@@ -10,6 +9,10 @@ input{
     color:rgb(255, 255, 255);
     width: 10rem;
     padding: 10px;
+}
+.input:active{
+    border: none;
+    border-color: azure;
 }
 .demo{
     display: block;
@@ -32,3 +35,10 @@ button:hover{
     background-color:rgba(255, 255, 255, 0.596);
     padding :10px 15px;
 }
+.input:focus {
+    outline: none; 
+    border: none; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.596); 
+    border-color: azure; 
+  }
+  
